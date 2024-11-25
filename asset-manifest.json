@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.bf7e80e7.css",
+    "main.js": "/Portfolio/static/js/main.836def6e.js",
+    "static/js/415.4d6acbeb.chunk.js": "/Portfolio/static/js/415.4d6acbeb.chunk.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/avatar_new.png": "/Portfolio/static/media/avatar_new.c062058cd743ced1fae5.png",
+    "static/media/pet.png": "/Portfolio/static/media/pet.beeefb7e56234d486eb6.png",
+    "static/media/emotion.png": "/Portfolio/static/media/emotion.fa98b37a4389794b2e37.png",
+    "static/media/xray.png": "/Portfolio/static/media/xray.f3488a0af1f6e54e8fd5.png",
+    "static/media/suicide.png": "/Portfolio/static/media/suicide.9c86cd7138a398c45fa5.png",
+    "static/media/TA.png": "/Portfolio/static/media/TA.110cdef93048b79312ef.png",
+    "static/media/segmentation.png": "/Portfolio/static/media/segmentation.f803fd2dfda52c08b641.png",
+    "static/media/codeEditor.png": "/Portfolio/static/media/codeEditor.1b585492490c8c1cace9.png",
+    "static/media/Gong_Avery_Resume_ML_2024.pdf": "/Portfolio/static/media/Gong_Avery_Resume_ML_2024.14350d374b475bd2cdea.pdf",
+    "static/media/chatify.png": "/Portfolio/static/media/chatify.7206044e0b5cdad44726.png",
+    "static/media/home-bg.jpg": "/Portfolio/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/stars.svg": "/Portfolio/static/media/stars.4670858166f244c581b078f3f45d3a23.svg",
+    "static/media/pre.svg": "/Portfolio/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/ag-logo.svg": "/Portfolio/static/media/ag-logo.a69617b623b58a3547f482c8bd65ac74.svg",
+    "main.bf7e80e7.css.map": "/Portfolio/static/css/main.bf7e80e7.css.map",
+    "main.836def6e.js.map": "/Portfolio/static/js/main.836def6e.js.map",
+    "415.4d6acbeb.chunk.js.map": "/Portfolio/static/js/415.4d6acbeb.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf7e80e7.css",
+    "static/js/main.836def6e.js"
+  ]
+}
