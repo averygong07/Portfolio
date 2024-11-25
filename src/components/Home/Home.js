@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogo from "../../Assets/stars.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
-import Type from "./Type";
 
 function Home() {
   return (
@@ -22,11 +21,16 @@ function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> SOUMYAJIT BEHERA</strong>
+                <strong className="main-name"> Avery Gong</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
-                <Type />
+              <div className="heading-description" style={{ padding: "30px 0" }}>
+                <h2 style={{ color: "rgb(155, 126, 172)", fontSize: "1.6em" }}>
+                  Aspiring to revolutionize healthcare through AI
+                </h2>
+                <div style={{ padding: "20px 0", fontSize: "1.1em", lineHeight: "1.5em" }}>
+                  <span className="purple">Machine Learning</span> • <span className="purple">Medical Imaging</span> • <span className="purple">Healthcare AI</span>
+                </div>
               </div>
             </Col>
 
@@ -35,7 +39,11 @@ function Home() {
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{ 
+                  maxHeight: "450px",
+                  opacity: "0.9",
+                  filter: "hue-rotate(45deg) brightness(1.1)"
+                }}
               />
             </Col>
           </Row>

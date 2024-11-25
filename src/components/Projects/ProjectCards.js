@@ -14,22 +14,28 @@ function ProjectCards(props) {
           {props.description}
         </Card.Text>
         <div className="project-card-buttons">
-          {props.showGithub !== false && (
-            <Button variant="primary" href={props.ghLink} target="_blank">
-              <BsGithub /> &nbsp;
-              {props.isBlog ? "Blog" : "GitHub"}
-            </Button>
-          )}
-          {!props.isBlog && props.demoLink && (
-            <Button
-              variant="primary"
-              href={props.demoLink}
-              target="_blank"
-              style={{ marginLeft: props.showGithub !== false ? "10px" : "0px" }}
-            >
-              <CgWebsite /> &nbsp;
-              {"Demo"}
-            </Button>
+          {props.comingSoon ? (
+            <span className="coming-soon-badge">Coming Soon</span>
+          ) : (
+            <>
+              {props.showGithub !== false && (
+                <Button variant="primary" href={props.ghLink} target="_blank">
+                  <BsGithub /> &nbsp;
+                  GitHub
+                </Button>
+              )}
+              {props.demoLink && (
+                <Button
+                  variant="primary"
+                  href={props.demoLink}
+                  target="_blank"
+                  style={{ marginLeft: props.showGithub !== false ? "10px" : "0px" }}
+                >
+                  <CgWebsite /> &nbsp;
+                  Demo
+                </Button>
+              )}
+            </>
           )}
         </div>
       </Card.Body>

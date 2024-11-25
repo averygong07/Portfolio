@@ -90,6 +90,7 @@ button:focus {
 }
 
 .navbar-toggler {
+  padding: 0.25rem 1.5rem !important;
   position: relative !important;
   background-color: transparent !important;
   border-color: transparent !important;
@@ -155,7 +156,7 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
+  height: 2.5em !important;
   width: 2.5em !important;
 }
 
@@ -307,13 +308,25 @@ button:focus {
 
 .myAvtar {
   justify-content: center !important;
-  padding-top: 9em !important;
+  display: flex !important;
+  padding-top: 30px !important;
+}
+
+.myAvtar img {
+  max-width: 400px !important;
+  height: auto !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 20px rgba(199, 112, 240, 0.2) !important;
 }
 
 @media (max-width: 767px) {
   .myAvtar {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
+  }
+  
+  .myAvtar img {
+    max-width: 300px !important;
   }
 }
 
@@ -494,63 +507,27 @@ button:focus {
   object-fit: contain !important;
 }
 
-.blog-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
-  padding-left: 25px !important;
-  padding-right: 25px !important;
-  height: auto !important;
+.project-card-buttons {
+  display: flex !important;
+  gap: 10px !important;
+  margin-top: auto !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
 }
 
-.blog-card-view {
-  background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
-  color: white !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+.project-card-buttons button {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
 }
 
-.blog-link {
-  color: white !important;
-  text-decoration: none !important;
-}
-
-.blog-link:hover {
-  cursor: pointer !important;
-}
-
-.blog-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
-}
-
-.blog-img {
-  padding: 0px !important;
-  opacity: 0.8 !important;
-  border-radius: 0px !important;
-}
-
-.btn-primary {
-  color: #fff !important;
-  background-color: #623686 !important;
-  border-color: #623686 !important;
-}
-
-.btn-primary:hover {
-  color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
-}
-.btn:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-.project-heading {
-  color: white !important;
-  font-size: 2.3em !important;
-  font-weight: 500 !important;
-  padding-top: 10px !important;
+.coming-soon-badge {
+  background: rgba(155, 126, 172, 0.2) !important;
+  color: rgb(155, 126, 172) !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  font-size: 0.9em !important;
+  letter-spacing: 0.5px !important;
+  border: 1px solid rgba(155, 126, 172, 0.3) !important;
 }
 
 /* --------- */
@@ -580,17 +557,37 @@ button:focus {
   transition: all 0.4s ease 0s !important;
 }
 
+.tech-icon-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+.tech-icon-name {
+  font-size: 0.3em !important;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  text-align: center !important;
+}
+
 @media (max-width: 767px) {
   .tech-icons {
     margin: 10px !important;
   }
+  .tech-icon-name {
+    font-size: 0.25em !important;
+    margin-top: 5px !important;
+  }
 }
 
 .tech-icons:hover {
-  transform: scale(1.05) !important;
+  transform: scale(1.08) !important;
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
@@ -755,4 +752,236 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.btn-primary {
+  color: #fff !important;
+  background-color: #623686 !important;
+  border-color: #623686 !important;
+}
+
+.btn-primary:hover {
+  color: #fff !important;
+  background-color: #6d20c5d7 !important;
+  border-color: #6d20c5d7 !important;
+}
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.project-heading {
+  color: white !important;
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+}
+
+.experience-card {
+  padding: 20px !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(200, 137, 230, 0.637) !important;
+  border-radius: 8px !important;
+  margin-bottom: 20px !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 5px 15px rgba(200, 137, 230, 0.2) !important;
+}
+
+.experience-content h3 {
+  color: #cd5ff8 !important;
+  font-size: 1.3em !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px !important;
+}
+
+.experience-content h5 {
+  color: white !important;
+  font-size: 1.1em !important;
+  margin-bottom: 8px !important;
+}
+
+.experience-date {
+  color: #8a49a8 !important;
+  font-size: 0.9em !important;
+  margin-bottom: 15px !important;
+}
+
+.experience-point {
+  color: white !important;
+  margin: 10px 0 !important;
+  font-size: 0.9em !important;
+}
+
+.experience-point svg {
+  color: #cd5ff8 !important;
+  margin-right: 10px !important;
+  font-size: 0.8em !important;
+}
+
+@media (max-width: 767px) {
+  .experience-card {
+    margin-bottom: 30px !important;
+  }
+}
+
+.experience-card .show-more-btn {
+  color: #cd5ff8 !important;
+  text-decoration: none !important;
+  font-size: 0.9em !important;
+  font-weight: 500 !important;
+  transition: color 0.3s ease !important;
+}
+
+.experience-card .show-more-btn:hover {
+  color: #a347c9 !important;
+}
+
+.experience-description ul {
+  margin-bottom: 0 !important;
+}
+
+.experience-point {
+  margin-bottom: 12px !important;
+}
+
+.experience-point:last-child {
+  margin-bottom: 0 !important;
+}
+
+.heading-description h2 {
+  font-weight: 500 !important;
+  letter-spacing: 0.2px !important;
+  padding-bottom: 10px !important;
+}
+
+.heading-description div {
+  color: white !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.5px !important;
+}
+
+@media (max-width: 767px) {
+  .heading-description h2 {
+    font-size: 1.4em !important;
+    text-align: center !important;
+  }
+  
+  .heading-description div {
+    text-align: center !important;
+    font-size: 1em !important;
+  }
+}
+
+.show-more-btn {
+  background: transparent;
+  color: #cd5ff8;
+  border: 1px solid #cd5ff8;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background: rgba(205, 95, 248, 0.1);
+  transform: translateY(-2px);
+}
+
+.show-more-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(205, 95, 248, 0.3);
+}
+
+.course-card {
+  padding: 20px !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(200, 137, 230, 0.637) !important;
+  border-radius: 8px !important;
+  margin-bottom: 20px !important;
+  height: 100% !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.course-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 5px 15px rgba(200, 137, 230, 0.2) !important;
+}
+
+.course-content h3 {
+  color: #cd5ff8 !important;
+  font-size: 1.2em !important;
+  font-weight: 600 !important;
+  margin-bottom: 10px !important;
+}
+
+.course-term {
+  color: #8a49a8 !important;
+  font-size: 0.9em !important;
+  margin-bottom: 15px !important;
+  font-style: italic !important;
+}
+
+.course-description {
+  color: white !important;
+  font-size: 0.9em !important;
+  line-height: 1.5 !important;
+}
+
+.course-card-col {
+  margin-bottom: 20px !important;
+}
+
+@media (max-width: 767px) {
+  .course-card {
+    margin-bottom: 15px !important;
+  }
+  
+  .course-content h3 {
+    font-size: 1.1em !important;
+  }
+}
+
+.experience-card-view {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2) !important;
+  color: white !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+  border-radius: 10px !important;
+  background: linear-gradient(to bottom right, #171717, #2c2c2c) !important;
+  padding: 10px !important;
+}
+
+.experience-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.experience-card-view ul {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+}
+
+.experience-card-view li {
+  padding-left: 1.5em !important;
+  position: relative !important;
+}
+
+.experience-card-view li:before {
+  content: "▹" !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: var(--imp-text-color) !important;
+}
+
+.card-title {
+  padding: 10px 0 !important;
+  font-size: 1.5em !important;
+  font-weight: 600 !important;
 }

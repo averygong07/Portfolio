@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/avatar_new.png";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
 
 function Home2() {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -19,37 +15,65 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
-              <i>
-                <b className="purple"> C++, Javascript and Go. </b>
-              </i>
+              Hi, I'm <span className="purple">Avery Gong </span> from <span className="purple">Toronto, Canada</span>. I'm pursuing my MS in Computer Science at Georgia Tech, specializing in Machine Learning and Interactive Intelligence.
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
-              <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
-              </i>
-              <br />
-              <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js</b>
-              </i>
+              {showMore ? (
+                <>
+                  My interdisciplinary background in computer science and health sciences has sparked my passion for leveraging AI to expeditely improve diagnosis and treatment of complex diseases.
+                  <br />
+                  <br />
+                  I aspire to work towards&nbsp;
+                  <i>
+                    <b className="purple">developing deep learning models for medical imaging </b> and
+                    <b className="purple"> creating impactful healthcare applications</b>
+                  </i>
+                  <br />
+                  <br />
+                  Currently, I'm focused on:
+                  <ul style={{ listStyleType: "none", padding: "0" }}>
+                    <li style={{ marginBottom: "10px" }}>
+                      • Investigating and implementing deep learning models for medical imaging analysis
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      • Building user-friendly healthcare applications
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      • Researching AI applications in medical diagnosis
+                    </li>
+                  </ul>
+                  <br />
+                  Beyond academics, I'm an avid outdoor enthusiast who finds joy in&nbsp;
+                  <span className="purple">hiking</span>,&nbsp;
+                  <span className="purple">camping</span>, and&nbsp;
+                  <span className="purple">tree-top trekking</span>. 
+                  My love for nature extends to volunteering at animal shelters, where I help care for our furry friends.
+                  <br />
+                  <br />
+                  In my quiet moments, I immerse myself in reading and creative writing, with a particular passion for&nbsp;
+                  <span className="purple">science fiction</span>. These stories inspire me to imagine the possibilities of technology in shaping our future.
+                </>
+              ) : (
+                <>
+                  My interdisciplinary background in computer science and health sciences has sparked my passion for leveraging AI to expeditely improve diagnosis and treatment of complex diseases.
+                  <br />
+                  <br />
+                  I aspire to work towards&nbsp;
+                  <i>
+                    <b className="purple">developing deep learning models for medical imaging </b> and
+                    <b className="purple"> creating impactful healthcare applications</b>
+                  </i>
+                </>
+              )}
+              <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <button
+                  onClick={() => setShowMore(!showMore)}
+                  className="show-more-btn"
+                  aria-label={showMore ? "Show less" : "Show more"}
+                >
+                  {showMore ? "Show Less" : "Show More"}
+                </button>
+              </div>
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -58,58 +82,9 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
       </Container>
     </Container>
   );
 }
+
 export default Home2;
